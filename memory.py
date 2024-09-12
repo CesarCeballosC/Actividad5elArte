@@ -18,7 +18,8 @@ from freegames import path
 writer = Turtle(visible=False) 
 state_taps = {'taps': 0}
 car = path('car.gif')
-tiles = list(range(32)) * 2
+alphabet = list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef")  # Letras del alfabeto
+tiles = (alphabet[:32] * 2)  # Usar las primeras 16 letras, repetidas dos veces
 state = {'mark': None}
 hide = [True] * 64
 revealed_count = 0
@@ -99,9 +100,9 @@ def draw():
     if mark is not None and hide[mark]: # Se revelan las fichas
         x, y = xy(mark)
         up()
-        goto(x + 2, y)
+        goto(x+25 , y+5) #AL modificar esta funcion desplazamos el numero en x ,y
         color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
+        write(tiles[mark],align='center', font=('Arial', 30, 'normal')) #Mediante el metodo align lo centramos
 
     if game_won: # Se muestra el mensaje de ganador
         writer.up()
