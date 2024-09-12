@@ -3,3 +3,6 @@
 ### Nuevas funcionalidades:
 - Cuenta el número total de taps que se dan en el tablero
 - Muestra un mensaje de "Ganaste" cada que se destapan todas las fichas
+- Se centraron los caracteres mostrados en las tiles
+- Se cambiaron por letras los numeros del memory
+
